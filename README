@@ -1,0 +1,34 @@
+Student: Ye Yuan  V00886654
+
+0. For this assignment, I worked together with Weiyi Zhang,Yiliang Liu and Oscar Wu.
+*************************************************************************************
+How to run this:tpye ./script in cmd,      
+	this will go to apps directory and run the make file and then the test01 file and then hexdump -C vdisk then run test02 then hexdump -C vdisk the new vdisk(which is empty).
+	you need to scroll the screen to see the whole stuff.
+
+vdisk will be in /apps
+/apps contains Makefile,test    /io contains File.c,File.h
+*************************************************************************************
+1. design
+directory apps contains test.c and Makefile
+directory io contains File.c and 
+block[0] is super block.
+
+block[1] is the block vector. if transmit each byte into binary,
+then 1 means usable, 0 means unusable. First ten bits are unusable.
+
+block[2] to block[5] are using for directories. A directory needs the whole block.
+
+block[6] to block[9] are using for inodes.
+
+block[10] to block[4095] are using for data.
+*************************************************************************************
+2. test file
+test01.c test the createdisk,readfile,writefile,create sub directory,changedirectory etc.
+test02.c test the creation of the vdisk.
+*************************************************************************************
+3.tradeoffs
+I didn't implement delete file.
+The datas can only be witten in contiguous blocks. Tried to wirte in uncontiguous blocks
+but failed. 
+
