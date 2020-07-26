@@ -1,4 +1,4 @@
-0. For this assignment, I worked together with Weiyi Zhang,Yiliang Liu and Oscar Wu.
+0. For this assignment, I worked together with my classmates.
 *************************************************************************************
 How to run this:tpye ./script in cmd,      
 	this will go to apps directory and run the make file and then the test01 file and then hexdump -C vdisk then run test02 then hexdump -C vdisk the new vdisk(which is empty).
